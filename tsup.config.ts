@@ -2,19 +2,9 @@ import { defineConfig } from 'tsup'
 
 export default defineConfig([
   {
-    entry: [
-      'src/index.ts',
-      'src/sdks/ai-sdk.ts',
-      'src/sdks/dexter.ts',
-      'src/sdks/genkit.ts',
-      'src/sdks/langchain.ts',
-      'src/sdks/llamaindex.ts',
-      'src/services/twitter/index.ts',
-      'src/tools/calculator.ts',
-      'src/tools/e2b.ts'
-    ],
-    outDir: 'dist',
-    target: 'node18',
+    entry: ['src/index.ts', 'src/cli.ts'],
+    outDir: 'build',
+    target: 'node16',
     platform: 'node',
     format: ['esm'],
     splitting: false,
